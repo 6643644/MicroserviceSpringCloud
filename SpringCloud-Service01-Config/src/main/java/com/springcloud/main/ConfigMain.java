@@ -7,7 +7,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.context.annotation.ComponentScan;
 
 /******************************************************************************************
- * @author Miles 
+ * @author Miles    
  * 
  * SpringBoot 的入口:        
  * 1. @ComponentScan 自動掃描       
