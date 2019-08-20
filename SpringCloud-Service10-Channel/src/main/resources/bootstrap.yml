@@ -1,0 +1,19 @@
+server:
+  port: 38990
+
+#取得遠端配置(該配置的順序問題，需要再研究一下)
+spring:
+  application:
+    name: channel
+  cloud:
+    config:
+      name: service
+      profile: config1
+      uri: http://localhost:18990/
+      label: master
+
+#註冊eureka    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:28990/eureka/

@@ -12,10 +12,11 @@ spring:
       uri: http://localhost:18990/
       label: master
   datasource:
-    url: jdbc:mysql://localhost:3306/testschema?useSSL=false
+    url: jdbc:mysql://localhost:3306/testschema?useSSL=false&serverTimezone=UTC 
     username: root
     password: a6643699
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # com.mysql.jdbc.Driver 已經棄用
       
 #設定 Eureka 註冊的路徑    
 eureka:
