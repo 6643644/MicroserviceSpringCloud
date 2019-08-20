@@ -16,7 +16,7 @@ spring:
           search-paths: ymls #該git根目錄底下的子目錄，多個可以用逗號(,)區隔ex: properties, ymls, testymls
           uri: C:/Spring Cloud Config Server
           
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://eureka01:28990/eureka/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka01:28990/eureka/
