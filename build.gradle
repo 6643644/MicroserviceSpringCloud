@@ -189,3 +189,11 @@ project(':SpringCloud-Service50-Test'){
 	}
 
 }
+
+project(':SpringCloud-Service51-DesignPatterns'){
+
+	dependencies {
+		
+	}
+
+}
