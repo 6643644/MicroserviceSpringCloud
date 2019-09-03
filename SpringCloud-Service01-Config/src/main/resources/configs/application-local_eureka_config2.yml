@@ -1,17 +1,3 @@
-## Eureka02
-server:
-  port: 28991
-
-#取得遠端配置(該配置的順序問題，需要再研究一下)
-spring:
-  application:
-    name: eureak
-  cloud:
-    config:
-      uri: http://localhost:18990/config
-      name: application
-      profile: local_eureka_config
-
 #設定 Eureka 註冊的路徑   
 #register-with-eureka 代表不註冊自己的service 
 #register-with-eureka: false

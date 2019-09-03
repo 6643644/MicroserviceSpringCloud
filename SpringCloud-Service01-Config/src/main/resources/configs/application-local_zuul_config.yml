@@ -1,0 +1,18 @@
+## SpringCloud-Service03-Zuul 專用的配置檔案
+server:
+  port: 8090
+  
+zuul:
+  routes:
+    channel:  
+      url: http://localhost:38990 
+     # 因為zuul會銷毀原來的session，並且建立一組新的session。如果要避免以上情況可以加上以下語法，讓session都保持同一組
+     # 也並且造成cookie丟失的情況
+      sensitiveHeaders: "*"  
+    business:
+      url : http://localhost:38991   
+      sensitiveHeaders: "*"  
+    redis:
+      url: http://localhost:28992
+      path: /testSession/**
+      sensitiveHeaders: "*"  

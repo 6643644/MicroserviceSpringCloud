@@ -36,7 +36,7 @@ subprojects{
 }
 
 project(':SpringCloud-Service01-Config'){
-	
+	// println sourceSets.main.output.classesDir
 	// 如果所有的或者多個專案會使用到 可以放在subprojects底下或者是allprojects底下
 	// apply plugin: 'java'
 	// apply plugin: 'eclipse'
@@ -162,7 +162,6 @@ project(':SpringCloud-Service11-Business'){
 		// 暫時使用MySQL
 		compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
 	}
-
 }
 
 project(':SpringCloud-Service20-SpringBatch'){

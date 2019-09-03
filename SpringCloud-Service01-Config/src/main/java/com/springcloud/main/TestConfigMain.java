@@ -13,8 +13,8 @@ public class TestConfigMain {
 	@Value("${server.port}")
 	private String serverPort;
 
-	@Value("${spring.cloud.config.server.git.uri}")
-	private String uri;
+//	@Value("${spring.cloud.config.server.git.uri}")
+//	private String uri;
 
 	@RequestMapping(value = "/miya")
 	public String miya() {
@@ -27,8 +27,8 @@ public class TestConfigMain {
 		return serverPort;
 	}
 
-	@RequestMapping(value = "/miya3")
-	public String miya3() {
-		return uri;
-	}
+//	@RequestMapping(value = "/miya3")
+//	public String miya3() {
+//		return uri;
+//	}
 }

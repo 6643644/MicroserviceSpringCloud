@@ -1,27 +1,11 @@
-server:
-  port: 38991
-
-#取得遠端配置(該配置的順序問題，需要再研究一下)
+# 從 SpringCloud-Service01-Config 取的配置文件
 spring:
   application:
     name: business
   cloud:
     config:
-      name: service
-      profile: config2
-      uri: http://localhost:18990/
-      label: master
-  datasource:
-    url: jdbc:mysql://localhost:3306/testschema?useSSL=false&serverTimezone=UTC 
-    username: root
-    password: a6643699
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    # com.mysql.jdbc.Driver 已經棄用
-      
-#設定 Eureka 註冊的路徑    
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:28990/eureka/
+      uri: http://localhost:18990/config
+      name: application
+      profile: local_biz_config
             
  
