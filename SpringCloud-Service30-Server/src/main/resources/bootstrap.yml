@@ -1,0 +1,5 @@
+server:
+  port: 58990
+spring:
+  application:
+    name: server

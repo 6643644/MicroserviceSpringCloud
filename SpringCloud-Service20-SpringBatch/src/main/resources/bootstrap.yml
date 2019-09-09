@@ -1,0 +1,5 @@
+server:
+  port: 48990
+spring:
+  application:
+    name: springbatch

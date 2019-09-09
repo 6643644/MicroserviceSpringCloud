@@ -1,0 +1,5 @@
+server:
+  port: 78990
+spring:
+  application:
+    name: design
