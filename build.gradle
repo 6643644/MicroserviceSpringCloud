@@ -63,6 +63,8 @@ project(':SpringCloud-Service01-Config'){
 	dependencies {
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-config-server', version: '2.1.3.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
+	
+		testCompile group: 'junit', name: 'junit', version: '4.12'
 	}
 	
 	//如果所有的或者多個專案會使用到 可以放在subprojects底下或者是allprojects底下
