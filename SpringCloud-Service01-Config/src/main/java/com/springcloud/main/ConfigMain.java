@@ -20,7 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableConfigServer
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.springcloud" })
+@ComponentScan(basePackages = { "com" })
 public class ConfigMain {
 
 	public static void main(String[] args) {

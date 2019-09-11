@@ -1,13 +1,9 @@
-## Eureka
-server:
-  port: 28990
-
 #取得遠端配置(該配置的順序問題，需要再研究一下)
 spring:
   application:
     name: eureak
   cloud:
     config:
-      uri: http://localhost:18990/config
+      uri: http://localhost:18080/config
       name: application
       profile: local_eureka_config

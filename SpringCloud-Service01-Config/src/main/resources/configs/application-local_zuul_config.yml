@@ -2,6 +2,13 @@
 server:
   port: 8090
   
+#設定 Eureka 註冊的路徑    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:28080/eureka/ 
+             
+#設定 Zuul 相關資訊
 zuul:
   routes:
     channel:  

@@ -14,9 +14,10 @@ buildscript {
 	// providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
-
+// 這是全域變數
 ext.projectIds = ['group': 'com.springcloud', 'version': '0.1']
 
+// 這是全域變數
 group = projectIds.group
 version = projectIds.version
 
@@ -26,6 +27,7 @@ subprojects{
 	apply plugin: 'eclipse'
 	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
+	// apply plugin: 'war'
     
     group = projectIds.group
     version = projectIds.version
@@ -53,6 +55,7 @@ project(':SpringCloud-Service01-Config'){
 	// apply plugin: 'eclipse'
 	// apply plugin: 'org.springframework.boot'
 	// apply plugin: "io.spring.dependency-management"
+	
 
 	//repositories {
 	//    mavenCentral()
@@ -117,6 +120,9 @@ project(':SpringCloud-Service04-OAuth'){
 project(':SpringCloud-Service05-Security'){
 
 	dependencies {
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.1.3.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
 	}

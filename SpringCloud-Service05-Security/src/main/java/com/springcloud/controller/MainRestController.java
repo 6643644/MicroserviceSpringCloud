@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  *******************************************************************************************/
 @RestController
 public class MainRestController {
+	
 	@RequestMapping("/test")
 	public String test() {
 		return "Test...";
 	}
+	
 }

@@ -4,13 +4,9 @@ spring:
     name: zuul
   cloud:
     config:
-      uri: http://localhost:18990/config
+      uri: http://localhost:18080/config
       name: application
       profile: local_zuul_config
            
-#設定 Eureka 註冊的路徑    
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:28990/eureka/
+
 

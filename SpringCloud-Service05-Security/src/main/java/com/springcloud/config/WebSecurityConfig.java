@@ -7,6 +7,9 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /******************************************************************************************
  * @author Miles
@@ -24,29 +27,49 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  *******************************************************************************************/
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true) // 啟動Security註解
+//@EnableGlobalMethodSecurity(prePostEnabled = true) // 啟動Security註解
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+//	@Override
+//	protected void configure(HttpSecurity http) throws Exception {
+//
+//		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
+//		// riding,縮寫為:CSRF/XSRF。
+//		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
+//
+//		// 允許所有用戶訪問"/"與"/test"
+//		http.authorizeRequests().antMatchers("/test").permitAll()
+//
+//				.anyRequest().authenticated().and().formLogin()
+//
+//				.loginPage("/aaaa")
+//
+//				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
+//
+//				.logoutSuccessUrl("/login").permitAll();
+//
+//	}
+
+	// 用InMemory的方式建立兩個使用者的認證/授權資料
+	@Bean
+	@Override
+	protected UserDetailsService userDetailsService() {
+		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+		manager.createUser(User.withUsername("user_1").password("123456").authorities("USER").build());
+		manager.createUser(User.withUsername("user_2").password("123456").authorities("USER").build());
+		return manager;
+	}
+
+	// configure(HttpSecurity): 設定任何request皆需認證，且指定Form Login page。
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
-		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
-		// riding,縮寫為:CSRF/XSRF。
-		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
-
-		// 允許所有用戶訪問"/"與"/test"
-		http.authorizeRequests().antMatchers("/test").permitAll()
-
-				.anyRequest().authenticated().and().formLogin()
-
-				.loginPage("/aaaa")
-
-				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
-
-				.logoutSuccessUrl("/login").permitAll();
+		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
+				.httpBasic();
 
 	}
 
-	// 暫時不知道這段的目的是什麼
+	// 認證後取得的物件的介面 有getAuthorities(), getCredentials(), getPrincipal(),
+	// isAuthenticated()等方法
 	@Bean
 	@Override
 	protected AuthenticationManager authenticationManager() throws Exception {

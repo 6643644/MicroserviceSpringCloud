@@ -1,7 +1,6 @@
 ## SpringCloud-Service11-Business 專用的配置檔案
-
 server:
-  port: 38992
+  port: 38080
 
 spring:
   datasource:
