@@ -123,8 +123,13 @@ project(':SpringCloud-Service05-Security'){
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.1.3.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
+		
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
-		compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
+		
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: '2.1.3.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-security', version: '2.1.3.RELEASE'
+		
+		// compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
 	}
 
 }

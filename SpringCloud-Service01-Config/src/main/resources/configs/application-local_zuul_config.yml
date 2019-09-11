@@ -23,3 +23,7 @@ zuul:
       url: http://localhost:28992
       path: /testSession/**
       sensitiveHeaders: "*"  
+    security:
+      url: http://localhost:58080
+      path: /sec/**
+      sensitiveHeaders: "*"  

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  * 
  * 
  *******************************************************************************************/
-@ComponentScan(basePackages = { "com.springcloud" })
+@ComponentScan(basePackages = { "com" })
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Main {
