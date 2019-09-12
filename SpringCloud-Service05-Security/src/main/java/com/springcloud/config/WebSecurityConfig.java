@@ -30,26 +30,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 //@EnableGlobalMethodSecurity(prePostEnabled = true) // 啟動Security註解
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//
-//		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
-//		// riding,縮寫為:CSRF/XSRF。
-//		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
-//
-//		// 允許所有用戶訪問"/"與"/test"
-//		http.authorizeRequests().antMatchers("/test").permitAll()
-//
-//				.anyRequest().authenticated().and().formLogin()
-//
-//				.loginPage("/aaaa")
-//
-//				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
-//
-//				.logoutSuccessUrl("/login").permitAll();
-//
-//	}
-
 	// 用InMemory的方式建立兩個使用者的認證/授權資料
 	@Bean
 	@Override
@@ -65,7 +45,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 //		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
 //				.httpBasic();
-		
 		http 
 	       .authorizeRequests().anyRequest().authenticated(); 
 		http 
@@ -85,4 +64,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected AuthenticationManager authenticationManager() throws Exception {
 		return super.authenticationManager();
 	}
+	
+	
+	
+
+//	@Override
+//	protected void configure(HttpSecurity http) throws Exception {
+//
+//		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
+//		// riding,縮寫為:CSRF/XSRF。
+//		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
+//
+//		// 允許所有用戶訪問"/"與"/test"
+//		http.authorizeRequests().antMatchers("/test").permitAll()
+//
+//				.anyRequest().authenticated().and().formLogin()
+//
+//				.loginPage("/aaaa")
+//
+//				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
+//
+//				.logoutSuccessUrl("/login").permitAll();
+//
+//	}
 }
