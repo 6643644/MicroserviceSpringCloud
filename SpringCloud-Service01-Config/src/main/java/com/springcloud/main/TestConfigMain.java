@@ -18,6 +18,7 @@ public class TestConfigMain {
 
 	@RequestMapping(value = "/miya")
 	public String miya() {
+		System.out.println("進來了miya1");
 		return profilesActice;
 	}
 

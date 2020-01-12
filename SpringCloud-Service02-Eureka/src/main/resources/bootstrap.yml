@@ -4,6 +4,6 @@ spring:
     name: eureak
   cloud:
     config:
-      uri: http://localhost:18080/config
+      uri: http://localhost:18080/prefix-config
       name: application
       profile: local_eureka_config
