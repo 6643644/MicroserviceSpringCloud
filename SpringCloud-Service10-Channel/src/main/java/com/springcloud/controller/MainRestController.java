@@ -30,6 +30,11 @@ public class MainRestController extends AbstractBaseApplication {
 
 	@Autowired
 	FeignClientResource feignClientResource;
+	
+	@RequestMapping("/testMain")
+	public String testMain() {
+		return "測試~~";
+	}
 
 	@RequestMapping("/test")
 	public String testJPA() {

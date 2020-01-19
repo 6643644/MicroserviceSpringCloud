@@ -4,7 +4,7 @@ spring:
     name: business
   cloud:
     config:
-      uri: http://localhost:18990/config
+      uri: http://localhost:18080/prefix-config
       name: application
       profile: local_biz_config
             

@@ -5,7 +5,7 @@ spring:
     name: channel
   cloud:
     config:
-      uri: http://localhost:18990/config
+      uri: http://localhost:18990/prefix-config
       name: application
       profile: application-local_chl_config
 
@@ -13,4 +13,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:28990/eureka/
+      defaultZone: http://localhost:28080/eureka/

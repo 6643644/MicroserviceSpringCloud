@@ -1,4 +1,3 @@
-#取得遠端配置(該配置的順序問題，需要再研究一下)
 spring:
   application:
     name: eureak

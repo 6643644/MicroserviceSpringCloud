@@ -1,10 +1,9 @@
-#取得遠端配置(該配置的順序問題，需要再研究一下)
 spring:
   application:
     name: zuul
   cloud:
     config:
-      uri: http://localhost:18080/config
+      uri: http://localhost:18080/prefix-config
       name: application
       profile: local_zuul_config
            
