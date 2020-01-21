@@ -35,5 +35,7 @@ public class UserRequest {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	
 }
 

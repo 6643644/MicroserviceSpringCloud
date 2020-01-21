@@ -5,11 +5,18 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springcloud.resources.FeignClientResource;
+import com.springcloud.resources.dto.LoginRequest;
+import com.springcloud.resources.dto.LoginResponse;
 import com.springcloud.resources.dto.UserRequest;
 import com.springcloud.resources.dto.UserResponse;
 
@@ -30,6 +37,27 @@ public class MainRestController extends AbstractBaseApplication {
 
 	@Autowired
 	FeignClientResource feignClientResource;
+	
+	@RequestMapping(path ="/Login",method = RequestMethod.POST)
+	@ResponseBody
+	public LoginResponse login(@RequestParam String username,@RequestParam String password) {
+		System.out.println("username:"+username);
+		System.out.println("password:"+password);
+		
+		LoginResponse response = new LoginResponse();
+		response.setStatus("successful");
+		response.setMessage("message~");
+		return response;
+	}
+	
+	@RequestMapping(path ="/Show",method = RequestMethod.GET)
+	@ResponseBody
+	public LoginResponse showLoginData() {
+		LoginResponse response = new LoginResponse();
+		response.setUsername("testName");
+		response.setPassword("testPass");
+		return response;
+	}
 	
 	@RequestMapping("/testMain")
 	public String testMain() {
