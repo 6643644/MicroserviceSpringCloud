@@ -16,10 +16,11 @@ import com.springcloud.model.UserRequest;
 import com.springcloud.repository.UserRepository;
 
 /******************************************************************************************
- * @author Miles
+ * 該Service的入口端<br>
+ * 1. @RestController<br>
+ * 2. 使用了Logback，該日誌系統為Spring Boot內建預設的並且支援使用slf4j。
  * 
- *         該Service的入口端 1. @RestController 2. 使用了Logback，該日誌系統為Spring
- *         Boot內建預設的並且支援使用slf4j。
+ * @author Miles
  * 
  *******************************************************************************************/
 @RestController
@@ -27,38 +28,38 @@ public class MainRestController {
 
 //	private final Logger log = LoggerFactory.getLogger(MainRestController.class);
 
-	@Autowired
-	private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-	@RequestMapping(path = "/bus/test")
-	public String testFeignClinetResourceClient() {
+    @RequestMapping(path = "/bus/test")
+    public String testFeignClinetResourceClient() {
 //		log.info("URL:/Test1;testFeignClinetResourceClient()");
-		return "testFeignClinetResource";
-	}
+	return "testFeignClinetResource";
+    }
 
-	@RequestMapping(path = "/bus/jpa/allUser")
-	public ResponseEntity<?> getAllUserByJPA() {
+    @RequestMapping(path = "/bus/jpa/allUser")
+    public ResponseEntity<?> getAllUserByJPA() {
 //		log.info("URL:/TestJPA;getAllUserByJPA()");
-		List<User> users = userRepository.findAll();
-		ResponseEntity<?> response = ResponseEntity.ok(users);
-		return response;
-	}
+	List<User> users = userRepository.findAll();
+	ResponseEntity<?> response = ResponseEntity.ok(users);
+	return response;
+    }
 
-	@RequestMapping(path = "/bus/jpa/user", method = RequestMethod.GET)
-	public ResponseEntity<?> getUserById(@RequestParam("id") Integer id) {
-		Optional<User> users = userRepository.findById(id);
-		ResponseEntity<?> response = ResponseEntity.ok(users.get());
-		return response;
-	}
+    @RequestMapping(path = "/bus/jpa/user", method = RequestMethod.GET)
+    public ResponseEntity<?> getUserById(@RequestParam("id") Integer id) {
+	Optional<User> users = userRepository.findById(id);
+	ResponseEntity<?> response = ResponseEntity.ok(users.get());
+	return response;
+    }
 
-	@RequestMapping(path = "/bus/jpa/createUser", method = RequestMethod.POST)
-	public ResponseEntity<?> createUser(@RequestBody UserRequest request) {
+    @RequestMapping(path = "/bus/jpa/createUser", method = RequestMethod.POST)
+    public ResponseEntity<?> createUser(@RequestBody UserRequest request) {
 //		log.info("createUser");
-		User user = new User();
-		user.setName(request.getName());
-		user.setAddress(request.getAddress());
-		User reUser = userRepository.save(user);
-		return ResponseEntity.ok(reUser);
-	}
+	User user = new User();
+	user.setName(request.getName());
+	user.setAddress(request.getAddress());
+	User reUser = userRepository.save(user);
+	return ResponseEntity.ok(reUser);
+    }
 
 }
