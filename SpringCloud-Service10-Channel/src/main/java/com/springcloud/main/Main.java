@@ -6,8 +6,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.springcloud.controller.AbstractBaseApplication;
-
 /**
  * 這個Service 我們把它當作所有前端request的入口，然後如果取得DB資訊則呼叫SpringCloud-Server2<br>
  * 
@@ -24,7 +22,7 @@ import com.springcloud.controller.AbstractBaseApplication;
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = { "com.springcloud" })
 @SpringBootApplication
-public class Main extends AbstractBaseApplication {
+public class Main {
 
     public static void main(String[] args) {
 	SpringApplication.run(Main.class, args);

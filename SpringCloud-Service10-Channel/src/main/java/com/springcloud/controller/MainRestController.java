@@ -33,7 +33,7 @@ import com.springcloud.resources.dto.UserResponse;
  *******************************************************************************************/
 @CrossOrigin
 @RestController
-public class MainRestController extends AbstractBaseApplication {
+public class MainRestController {
 
     @Autowired
     FeignClientResource feignClientResource;
