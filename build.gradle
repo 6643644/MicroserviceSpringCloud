@@ -263,7 +263,7 @@ project(':SpringCloud-Service51-DesignPatterns'){
 	
 	dependencies {
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
-		//compile project(':SpringCloud-Common-component')
+		compile project(':SpringCloud-Common-component')
 		
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
