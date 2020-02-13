@@ -133,6 +133,26 @@ project(':SpringCloud-Service03-Zuul'){
 
 }
 
+project(':SpringCloud-Service03-ZuulIntegrationOAuth2'){
+	apply plugin: 'org.springframework.boot'
+	
+	dependencies {
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
+		
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.1.3.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: '2.1.3.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-security', version: '2.1.3.RELEASE'
+		
+	
+		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
+	}
+
+}
+
 project(':SpringCloud-Service04-OAuth'){
 	apply plugin: 'org.springframework.boot'
 	
@@ -140,6 +160,8 @@ project(':SpringCloud-Service04-OAuth'){
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: '2.1.3.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-security', version: '2.1.3.RELEASE'
 	
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}

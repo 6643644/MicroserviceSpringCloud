@@ -16,3 +16,5 @@ include 'SpringCloud-Service30-Server' //該服務(Service) 主要處理Server
 include 'SpringCloud-Service50-Test'
 include 'SpringCloud-Service51-DesignPatterns' //該服務(Service) 主要練習設計模式
 include 'SpringCloud-Common-component' // 存放所有共用的Lib
+
+include 'SpringCloud-Service03-ZuulIntegrationOAuth2' //該服務(Service) 主要練習Spring Cloud Zuul 與 OAuth2 的整合

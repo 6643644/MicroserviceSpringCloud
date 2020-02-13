@@ -40,14 +40,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     // configure(HttpSecurity): 設定任何request皆需認證，且指定Form Login page。
+    // 任何請求都會自動進入預設登入頁面
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
-//				.httpBasic();
-	http.authorizeRequests().anyRequest().authenticated();
-	http.formLogin().failureUrl("/login?error").defaultSuccessUrl("/").loginPage("/login").permitAll().and()
-		.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login")
-		.permitAll();
+	http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
     }
 
     // 認證後取得的物件的介面 有getAuthorities(), getCredentials(), getPrincipal(),
