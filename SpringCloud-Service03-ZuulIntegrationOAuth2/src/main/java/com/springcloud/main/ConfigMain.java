@@ -52,7 +52,7 @@ public class ConfigMain extends SpringBootServletInitializer {
 
     /**
      * 1.授權中心
-     * 2. @Order 暫時不知道
+     * 2. @Order Spring IOC Bean的執行順序的優先級(Bean的加載順序不受@Order 或 Ordered 影響)
      * 
      * 
      */
