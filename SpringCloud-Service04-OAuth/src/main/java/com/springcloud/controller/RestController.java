@@ -1,4 +1,4 @@
-package com.springcloud.main;
+package com.springcloud.controller;
 
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
