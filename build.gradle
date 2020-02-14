@@ -157,6 +157,7 @@ project(':SpringCloud-Service04-OAuth'){
 	apply plugin: 'org.springframework.boot'
 	
 	dependencies {
+	compile group: "${springCloudGroup}", name: 'spring-cloud-starter-config', version: "${springCloudConfigVersion.version}"
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.7.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'

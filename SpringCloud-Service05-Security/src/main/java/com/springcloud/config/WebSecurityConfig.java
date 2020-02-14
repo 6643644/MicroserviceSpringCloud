@@ -54,23 +54,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	return super.authenticationManager();
     }
 
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//
-//		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
-//		// riding,縮寫為:CSRF/XSRF。
-//		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
-//
-//		// 允許所有用戶訪問"/"與"/test"
-//		http.authorizeRequests().antMatchers("/test").permitAll()
-//
-//				.anyRequest().authenticated().and().formLogin()
-//
-//				.loginPage("/aaaa")
-//
-//				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
-//
-//				.logoutSuccessUrl("/login").permitAll();
-//
-//	}
+    //	@Override
+    //	protected void configure(HttpSecurity http) throws Exception {
+    //
+    //		// 防止 CSRF攻擊，中文名稱:跨站請求偽造 ，也被稱為:one click attack/session
+    //		// riding,縮寫為:CSRF/XSRF。
+    //		http.authorizeRequests().anyRequest().authenticated().and().csrf().disable();
+    //
+    //		// 允許所有用戶訪問"/"與"/test"
+    //		http.authorizeRequests().antMatchers("/test").permitAll()
+    //
+    //				.anyRequest().authenticated().and().formLogin()
+    //
+    //				.loginPage("/aaaa")
+    //
+    //				.defaultSuccessUrl("/welcome").permitAll().and().logout().logoutUrl("/logout")
+    //
+    //				.logoutSuccessUrl("/login").permitAll();
+    //
+    //	}
 }

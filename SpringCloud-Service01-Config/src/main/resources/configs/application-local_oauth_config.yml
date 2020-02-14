@@ -1,0 +1,10 @@
+## SpringCloud-Service04-OAuth 專用的配置檔案
+server:
+  port: 9990
+  
+#設定 Eureka 註冊的路徑    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:28080/eureka/ 
+             
