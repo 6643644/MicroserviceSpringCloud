@@ -1,9 +1,9 @@
 ## SpringCloud-Service05-Security 專用的配置檔案
 server:
-  port: 58080
+  port: 9991
   
 #設定 Eureka 註冊的路徑    
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://localhost:28080/eureka/
+            defaultZone: http://localhost:28080/eureka/ 
