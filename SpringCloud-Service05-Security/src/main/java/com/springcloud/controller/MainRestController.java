@@ -12,24 +12,29 @@ import org.springframework.web.bind.annotation.RestController;
  *******************************************************************************************/
 @RestController
 public class MainRestController {
-    
-    @GetMapping(value = "/miya")
-    public String miya() {
-	System.out.println("進來了miya1");
-	return "AAAAAA";
-    }
-    
-    
-    @RequestMapping(value = "/aaa2")
-    public String test2() {
-	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-	return "Test2...";
+
+    @RequestMapping(value = "/test")
+    public String test() {
+	System.out.println("test");
+	return "test...";
     }
 
-    @RequestMapping(value = "/aaa")
-    public String test() {
-	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-	return "Test...";
+    @RequestMapping(value = "/test1")
+    public String test1() {
+	System.out.println("test1");
+	return "test1...";
+    }
+
+    @RequestMapping(value = "/test2")
+    public String test2() {
+	System.out.println("test2");
+	return "test2...";
+    }
+
+    @RequestMapping(value = "/test3")
+    public String test3() {
+	System.out.println("test3");
+	return "test3...";
     }
 
 }

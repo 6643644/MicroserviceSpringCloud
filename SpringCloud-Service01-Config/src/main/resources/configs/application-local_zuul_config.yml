@@ -24,7 +24,7 @@ zuul:
       url: http://localhost:28992
       path: /testSession/**
       sensitiveHeaders: "*"  
-#    security:
-#      url: http://localhost:58080
-#      path: /sec/**
-#      sensitiveHeaders: "*"  
+    security:
+      url: http://localhost:9991
+      path: /sec/**
+      sensitiveHeaders: "*"  
