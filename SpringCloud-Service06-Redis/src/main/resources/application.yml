@@ -1,0 +1,11 @@
+redisConfig:
+  host: 127.0.0.1
+  port: 9980
+  database: 0
+#  password: null
+  timeout: 3000
+#  pool:
+#    max-active: 8
+#    max-idle: 8
+#    min-idle: 0
+#    max-wait: -1

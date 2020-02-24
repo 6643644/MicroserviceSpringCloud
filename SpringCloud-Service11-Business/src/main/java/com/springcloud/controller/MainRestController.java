@@ -26,26 +26,33 @@ import com.springcloud.repository.UserRepository;
 @RestController
 public class MainRestController {
 
-//	private final Logger log = LoggerFactory.getLogger(MainRestController.class);
+    //	private final Logger log = LoggerFactory.getLogger(MainRestController.class);
 
     @Autowired
     private UserRepository userRepository;
 
     @RequestMapping(path = "/bus/test")
     public String testFeignClinetResourceClient() {
-//		log.info("URL:/Test1;testFeignClinetResourceClient()");
+	//		log.info("URL:/Test1;testFeignClinetResourceClient()");
 	return "testFeignClinetResource";
     }
 
     @RequestMapping(path = "/bus/jpa/allUser")
     public ResponseEntity<?> getAllUserByJPA() {
-//		log.info("URL:/TestJPA;getAllUserByJPA()");
+	//		log.info("URL:/TestJPA;getAllUserByJPA()");
 	List<User> users = userRepository.findAll();
 	ResponseEntity<?> response = ResponseEntity.ok(users);
 	return response;
     }
 
-    @RequestMapping(path = "/bus/jpa/user", method = RequestMethod.GET)
+    @RequestMapping(path = "/bus/jpa/user/name", method = RequestMethod.POST)
+    public ResponseEntity<?> getUserByNameAndPassword(@RequestBody UserRequest request) {
+	Optional<User> users = userRepository.findByName(request.getName());
+	ResponseEntity<?> response = ResponseEntity.ok(users.get());
+	return response;
+    }
+
+    @RequestMapping(path = "/bus/jpa/user/id", method = RequestMethod.GET)
     public ResponseEntity<?> getUserById(@RequestParam("id") Integer id) {
 	Optional<User> users = userRepository.findById(id);
 	ResponseEntity<?> response = ResponseEntity.ok(users.get());
@@ -54,7 +61,7 @@ public class MainRestController {
 
     @RequestMapping(path = "/bus/jpa/createUser", method = RequestMethod.POST)
     public ResponseEntity<?> createUser(@RequestBody UserRequest request) {
-//		log.info("createUser");
+	//		log.info("createUser");
 	User user = new User();
 	user.setName(request.getName());
 	user.setAddress(request.getAddress());

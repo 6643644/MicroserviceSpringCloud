@@ -19,7 +19,10 @@ import com.springcloud.entitys.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     public Optional<User> findById(Integer id);
-// spring data jpa 使用2.0以上 所以不支援類似以下的寫法，必須使用Optional為類型 處理可能Null的情況
-//	public User findById(Integer id);
+
+    public Optional<User> findByName(String name);
+
+    // spring data jpa 使用2.0以上 所以不支援類似以下的寫法，必須使用Optional為類型 處理可能Null的情況
+    //	public User findById(Integer id);
 
 }

@@ -38,12 +38,6 @@ public class OAuthAuthorizationServerConfig extends AuthorizationServerConfigure
 
     }
 
-    //    @Override
-    //    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-    //	endpoints.accessTokenConverter(accessTokenConverter()).authenticationManager(authenticationManager)
-    //		.userDetailsService(webSecurityConfigurerAdapter.userDetailsServiceBean());
-    //    }
-
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
 	oauthServer.checkTokenAccess("isAuthenticated()");

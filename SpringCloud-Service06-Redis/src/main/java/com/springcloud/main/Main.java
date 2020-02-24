@@ -9,6 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 /******************************************************************************************
  * @EnableRedisHttpSession 代表啟動Redis HttpSession管理Session機制
  * 
+ * a. 網站參考URL:https://tpu.thinkpower.com.tw/tpu/articleDetails/1525
+ * 
  * @author Miles
  *******************************************************************************************/
 @ComponentScan(basePackages = { "com.springcloud" })

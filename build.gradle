@@ -180,6 +180,8 @@ project(':SpringCloud-Service05-Security'){
 		//compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.1.RELEASE'
 		//compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
 		//compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.1.RELEASE'
+		
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
 	
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
