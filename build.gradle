@@ -182,7 +182,7 @@ project(':SpringCloud-Service05-Security'){
 		//compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.1.RELEASE'
 		
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
-	
+		
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
 
@@ -192,18 +192,18 @@ project(':SpringCloud-Service06-Redis'){
 	apply plugin: 'org.springframework.boot'
 	
 	dependencies {
-		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.1.3.RELEASE'
-		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
+		compile group: "${springCloudGroup}", name: 'spring-cloud-starter-config', version: "${springCloudConfigVersion.version}"
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.1.2.RELEASE'
 		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
-		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
 		
 		// Redis & Spring-session
 		// Spring 1.5 以後只支援spring-boot-starter-data-redis
 		// Spring 1.4 之前只支援spring-boot-starter-redis
-		compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.7.RELEASE'
-	
-		testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.7.RELEASE'
-	
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.3.RELEASE'
+		compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.4.2'
+		
+		//testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.7.RELEASE'
+		
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
 

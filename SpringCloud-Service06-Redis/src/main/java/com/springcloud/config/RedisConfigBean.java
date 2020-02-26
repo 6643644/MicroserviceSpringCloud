@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @author Miles
  *******************************************************************************************/
 @Component
-//@ConfigurationProperties(prefix = "redisConfig")
+@ConfigurationProperties(prefix = "spring.redis")
 public class RedisConfigBean {
     private String host;
 

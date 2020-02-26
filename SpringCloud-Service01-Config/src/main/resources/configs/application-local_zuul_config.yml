@@ -20,10 +20,10 @@ zuul:
     business:
       url : http://localhost:38991   
       sensitiveHeaders: "*"  
-    redis:
-      url: http://localhost:28992
-      path: /testSession/**
-      sensitiveHeaders: "*"  
+#    redis:
+#      url: http://localhost:28992
+#      path: /testSession/**
+#      sensitiveHeaders: "*"  
     security:
       url: http://localhost:9991
       path: /sec/**

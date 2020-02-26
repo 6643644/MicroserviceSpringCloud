@@ -7,17 +7,15 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 /******************************************************************************************
- * @EnableRedisHttpSession 代表啟動Redis HttpSession管理Session機制
- * 
- * a. 網站參考URL:https://tpu.thinkpower.com.tw/tpu/articleDetails/1525
+ * 1. @EnableRedisHttpSession 代表啟動Redis HttpSession管理Session機制<br>
+ * 2. 網站參考URL:https://tpu.thinkpower.com.tw/tpu/articleDetails/1525<br>
  * 
  * @author Miles
  *******************************************************************************************/
-@ComponentScan(basePackages = { "com.springcloud" })
+@ComponentScan(basePackages = { "com" })
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = { "com.springcloud" })
 @SpringBootApplication
-//@EnableRedisHttpSession
+@EnableFeignClients(basePackages = { "com.springcloud" })
 public class Main {
 
     public static void main(String[] args) {

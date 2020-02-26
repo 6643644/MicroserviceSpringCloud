@@ -1,49 +1,39 @@
 package com.springcloud.config;
 
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.core.serializer.support.DeserializingConverter;
-import org.springframework.core.serializer.support.SerializingConverter;
-import org.springframework.data.redis.serializer.RedisSerializer;
-import org.springframework.data.redis.serializer.SerializationException;
-
 /******************************************************************************************
  * 繼承序列化的 Redis Serializer
  * 
  * @author Miles
  *******************************************************************************************/
-public class RedisObjectSerializer implements RedisSerializer<Object> {
+public class RedisObjectSerializer {
+    private String username;
 
-    private Converter<Object, byte[]> serializer = new SerializingConverter();
-    private Converter<byte[], Object> deserializer = new DeserializingConverter();
+    private Integer sex;
 
-    static final byte[] EMPTY_ARRAY = new byte[0];
+    private Long id;
 
-    public Object deserialize(byte[] bytes) {
-	if (isEmpty(bytes)) {
-	    return null;
-	}
-
-	try {
-	    return deserializer.convert(bytes);
-	} catch (Exception ex) {
-	    throw new SerializationException("Cannot deserialize", ex);
-	}
+    public String getUsername() {
+	return username;
     }
 
-    public byte[] serialize(Object object) {
-	if (object == null) {
-	    return EMPTY_ARRAY;
-	}
-
-	try {
-	    return serializer.convert(object);
-	} catch (Exception ex) {
-	    return EMPTY_ARRAY;
-	}
+    public void setUsername(String username) {
+	this.username = username;
     }
 
-    private boolean isEmpty(byte[] data) {
-	return (data == null || data.length == 0);
+    public Integer getSex() {
+	return sex;
+    }
+
+    public void setSex(Integer sex) {
+	this.sex = sex;
+    }
+
+    public Long getId() {
+	return id;
+    }
+
+    public void setId(Long id) {
+	this.id = id;
     }
 
 }

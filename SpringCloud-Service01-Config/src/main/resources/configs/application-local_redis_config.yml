@@ -1,0 +1,22 @@
+## 
+server:
+  port: 9992
+  
+#設定 Eureka 註冊的路徑    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:28080/eureka/ 
+             
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 9980
+    timeout: 3000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: 1
+        max-idle: 8
+        min-idle: 0
