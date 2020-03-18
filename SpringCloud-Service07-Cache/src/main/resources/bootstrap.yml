@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cache
+  cloud:
+    config:
+      uri: http://localhost:18080/prefix-config
+      name: application
+      profile: local_cache_config

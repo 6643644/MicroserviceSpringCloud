@@ -5,14 +5,14 @@ include 'SpringCloud-Service01-Config'  //該服務(Service) 主要處理整體�
 include 'SpringCloud-Service02-Eureka'  //該服務(Service) 主要處理Eureka的配置
 include 'SpringCloud-Service02-Eureka2' //該服務(Service) 主要處理Eureka的配置
 include 'SpringCloud-Service03-Zuul' //該服務(Service) 主要處理Zuul的配置
-include 'SpringCloud-Service04-OAuth'
+include 'SpringCloud-Service04-OAuth' //該服務(Service) 主要練習Spring OAuth2的相關技術
 include 'SpringCloud-Service05-Security' //該服務(Service) 主要是練習Spring Security
-include 'SpringCloud-Service06-Redis' //該服務(Service) 主要練習Spring Session相關技術
+include 'SpringCloud-Service06-Redis' //該服務(Service) 主要練習Spring Data Redis相關技術
+include 'SpringCloud-Service07-Cache' //該服務(Service) 主要練習Spring Cache相關技術
 include 'SpringCloud-Service10-Channel' //該服務(Service) 主要處理Channel
 include 'SpringCloud-Service11-Business' //該服務(Service) 主要處理Busines
 include 'SpringCloud-Service20-SpringBatch' //該服務(Service) 主要處理批次
 include 'SpringCloud-Service30-Server' //該服務(Service) 主要處理Server
-//include 'SpringCloud-Service40-CommonUtils'
 include 'SpringCloud-Service50-Test'
 include 'SpringCloud-Service51-DesignPatterns' //該服務(Service) 主要練習設計模式
 include 'SpringCloud-Common-component' // 存放所有共用的Lib

@@ -188,6 +188,8 @@ project(':SpringCloud-Service05-Security'){
 
 }
 
+
+
 project(':SpringCloud-Service06-Redis'){
 	apply plugin: 'org.springframework.boot'
 	
@@ -203,6 +205,23 @@ project(':SpringCloud-Service06-Redis'){
 		compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.4.2'
 		
 		//testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.7.RELEASE'
+		
+		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
+	}
+
+}
+
+project(':SpringCloud-Service07-Cache'){
+	apply plugin: 'org.springframework.boot'
+	
+	dependencies {
+		compile group: "${springCloudGroup}", name: 'spring-cloud-starter-config', version: "${springCloudConfigVersion.version}"
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.1.2.RELEASE'
+		compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
+		
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '2.1.7.RELEASE'
+		
+		
 		
 		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}

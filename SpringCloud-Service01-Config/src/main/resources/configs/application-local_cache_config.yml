@@ -1,0 +1,9 @@
+server:
+  port: 9993
+  
+  
+  #設定 Eureka 註冊的路徑    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:28080/eureka/ 
