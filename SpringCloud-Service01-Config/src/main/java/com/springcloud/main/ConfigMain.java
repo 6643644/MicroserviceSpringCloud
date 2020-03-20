@@ -44,6 +44,7 @@ public class ConfigMain extends SpringBootServletInitializer implements WebAppli
 
     public static void main(String[] args) {
 	SpringApplication.run(ConfigMain.class, args);
+	System.out.println("我不小心被啟動了");
     }
 
     @Bean

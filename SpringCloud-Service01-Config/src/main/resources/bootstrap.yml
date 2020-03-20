@@ -6,6 +6,7 @@ spring:
     name: config
   profiles:
     active: native
+  jmx:    enabled: false
   cloud:
     config:
       server:
@@ -21,13 +22,20 @@ spring:
         prefix: /prefix-config
         native:
           searchLocations: classpath:/configs
-      
+
+################# 開發環境使用的配置以下為 ####################     
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:28080/eureka/
-      
-      
+################# 開發環境使用的配置以上為 ####################  
+################# 開發環境並且使用外部Tomcat的配置 Start ####################     
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:28080/SpringCloud-Service02-Eureka/eureka/
+################# 開發環境並且使用外部Tomcat的配置 End ####################     
+    
 #以下測試是否取的配置文件內容物    
 my:
   name: Miles

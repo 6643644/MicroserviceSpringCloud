@@ -13,7 +13,11 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+# 開發環境使用的配置方式
     serviceUrl:
       defaultZone: http://eureka01:${server.port}/eureka/
-#    serviceUrl:
-#      defaultZone: http://eureka02:28081/eureka/   
+
+# 使用外部Tomcat的配置方式
+#     defaultZone: http://eureka01:${server.port}/SpringCloud-Service02-Eureka/eureka/
+# 取得另一個eureka service
+#     defaultZone: http://eureka02:28081/eureka/   

@@ -1,8 +1,17 @@
 spring:
   application:
     name: eureak
+############# 開發環境使用 #############    
   cloud:
     config:
       uri: http://localhost:18080/prefix-config
       name: application
       profile: local_eureka_config
+############# 開發環境使用 #############  
+#  cloud:
+#    config:
+#      uri: http://localhost:18080/SpringCloud-Service01-Config/prefix-config
+#      name: application
+#      profile: local_eureka_config
+#  jmx:
+#    enabled: false
