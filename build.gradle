@@ -295,10 +295,10 @@ project(':SpringCloud-Service50-Test'){
 	apply plugin: 'org.springframework.boot'
 	
 	dependencies {
-		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
-		compile group: 'org.json', name: 'json', version: '20190722'
+		// compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
+		// compile group: 'org.json', name: 'json', version: '20190722'
 	
-		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
+		// providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
 
 }
@@ -307,10 +307,10 @@ project(':SpringCloud-Service51-DesignPatterns'){
 	apply plugin: 'org.springframework.boot'
 	
 	dependencies {
-		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
-		compile project(':SpringCloud-Common-component')
+		// compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
+		// compile project(':SpringCloud-Common-component')
 		
-		providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
+		// providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 排除embedded tomcat(Spring Boot 嵌入式Tomcat
 	}
 }
 

@@ -1,14 +1,22 @@
 package com.springcloud.main;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import java.math.BigDecimal;
 
-@ComponentScan(basePackages = { "com.springcloud" })
-@SpringBootApplication
+import com.springcloud.testClass.CalculatorTest;
+
 public class Main {
 
     public static void main(String[] args) {
-	SpringApplication.run(Main.class, args);
+//	System.out.println("測試~");
+//	CalculatorTest.testPlus();
+//	CalculatorTest.testMinus();
+	
+	String XchgPrice = "60";
+	String MinBonusPt = "1000";
+//	System.out.println(new BigDecimal(XchgPrice).divide(new BigDecimal(MinBonusPt)));
+//	System.out.println(Double.parseDouble(XchgPrice) / Double.parseDouble(MinBonusPt));
+	System.out.println((Integer.parseInt(XchgPrice) * 14000) / Integer.parseInt(MinBonusPt));
+	
+	
     }
 }

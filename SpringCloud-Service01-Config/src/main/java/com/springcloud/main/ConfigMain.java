@@ -42,6 +42,7 @@ public class ConfigMain extends SpringBootServletInitializer implements WebAppli
 	return application.sources(applicationClass);
     }
 
+    //測試註解
     public static void main(String[] args) {
 	SpringApplication.run(ConfigMain.class, args);
 	System.out.println("我不小心被啟動了");
@@ -51,9 +52,9 @@ public class ConfigMain extends SpringBootServletInitializer implements WebAppli
     public Filter filter1() {
 	return new TimeConsumingCalculationFilter();
     }
-    
-//    @Bean
-//    public Filter filter2() {
-//        return new TimeConsumingCalculationFilter2();
-//    }
+
+    //    @Bean
+    //    public Filter filter2() {
+    //        return new TimeConsumingCalculationFilter2();
+    //    }
 }
