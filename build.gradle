@@ -295,6 +295,9 @@ project(':SpringCloud-Service50-Test'){
 	apply plugin: 'org.springframework.boot'
 	
 	dependencies {
+	
+		testCompile group: 'junit', name: 'junit', version: '3.8.1'
+	
 		// compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.7.RELEASE'
 		// compile group: 'org.json', name: 'json', version: '20190722'
 	

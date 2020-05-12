@@ -1,6 +1,7 @@
 package com.springcloud.model;
 
 public class ModelA {
+    
     private Integer id;
     private String name;
 
